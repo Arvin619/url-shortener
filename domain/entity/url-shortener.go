@@ -13,3 +13,11 @@ type UrlShortener struct {
 	// CreateTime 產生時間
 	CreateTime time.Time
 }
+
+func NewUrlShortener(shortId string, originalUrl string) *UrlShortener {
+	return &UrlShortener{
+		ShortId:     shortId,
+		OriginalUrl: originalUrl,
+		CreateTime:  time.Now(),
+	}
+}
